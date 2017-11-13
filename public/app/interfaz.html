@@ -1,0 +1,62 @@
+<div>
+	<div class="row">
+		<div class="col-lg-8">
+			<h4 class="text-center">Secciones variables</h4>
+			<div class="row container-funciones">
+				<img class='d-inline-block col-4' src="{{$ctrl.imgTramo1}}">
+				<img class='d-inline-block col-4 flip' src="{{$ctrl.imgTramo2}}">
+				<img class='d-inline-block col-4' src="{{$ctrl.imgTramo3}}">
+			</div>
+			<div class="row">
+				<div class="col-4">
+					<h4 class="text-center">L1</h4>
+					<select ng-model="$ctrl.imgTramo1" class="form-control">
+						<option value="/app/parabola.png">Ecuación Cuadrática</option>
+						<option value="/app/recta.png">Ecuación de primer grado</option>
+					</select>
+				</div>
+				<div class="col-4">
+					<h4 class="text-center">L2</h4>
+					<select ng-model="$ctrl.imgTramo2" class="form-control">
+						<option value="/app/parabola.png">Ecuación Cuadrática</option>
+						<option value="/app/recta.png">Ecuación de primer grado</option>
+					</select>
+				</div>
+				<div class="col-4">
+					<h4 class="text-center">L3</h4>
+					<select ng-model="$ctrl.imgTramo3" class="form-control">
+						<option value="/app/parabola.png">Ecuación Cuadrática</option>
+						<option value="/app/recta.png">Ecuación de primer grado</option>
+					</select>
+				</div>
+			</div>
+			<div class="row p-5">
+				<img class="container p-5" src="/app/diagrama.png">
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<input type="text" class="form-control" ng-model="$ctrl.l1" placeholder="Longitud 1" name="L1">
+			<input type="text" class="form-control" ng-model="$ctrl.l2" placeholder="Longitud 2" name="L2">
+			<input type="text" class="form-control" ng-model="$ctrl.l3" placeholder="Longitud 3" name="L3">
+			<input type="text" class="form-control" placeholder="Altura 1" name="H1">
+			<input type="text" class="form-control" placeholder="Altura 2" name="H2">
+			<input type="text" class="form-control" placeholder="Altura 3" name="H3">
+			<input type="text" class="form-control" placeholder="Altura 4" name="H1">
+			<input type="text" class="form-control" placeholder="Carga Distribuida" name="q">
+			<input type="text" class="form-control" placeholder="Carga Puntual" name="p">
+			<div>
+				<h3 class="text-center mt-3">Resultados</h3>
+				<ul class="list-group">
+					<li class="list-group-item"><strong>Ф1: {{$ctrl.totalPhi1()}}</strong></li>
+					<li class="list-group-item"><strong>Ф2: {{$ctrl.totalPhi2()}}</strong></li>
+					<li class="list-group-item"><strong>Ф3: {{$ctrl.totalPhi3()}}</strong></li>
+					<li class="list-group-item"><strong>Ф4: {{$ctrl.totalPhi4()}}</strong></li>
+					<li class="list-group-item"><strong>Ci: {{$ctrl.ci()}}</strong></li>
+					<li class="list-group-item"><strong>C: {{$ctrl.c()}}</strong></li>
+					<li class="list-group-item"><strong>Cj: {{$ctrl.cj()}}</strong></li>
+					<li class="list-group-item"><strong>Ca: {{$ctrl.ca()}}</strong></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

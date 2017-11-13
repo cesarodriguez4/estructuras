@@ -6,3 +6,19 @@ body {
 a {
   color: #00B7FF;
 }
+
+.container-funciones {
+	background-color: #949494;
+    border-radius: 10px;
+    padding: 5% 0 0 0;
+}
+
+.flip {
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    margin-left: -3%;
+}
