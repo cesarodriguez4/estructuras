@@ -6,12 +6,11 @@ angular.module('estructuras')
 		const PARABOLA = '/app/parabola.png';
 		const RECTA = '/app/recta.png';
 		vm.l1 = 1;
-		vm.l2 = 3;
-		vm.l3 = 3;
-		vm.xo = 0;
-		vm.yo = 0.8;
-		vm.x1 = 1;
-		vm.y1 = 0.4;
+		vm.l2 = 1;
+		vm.l3 = 1;
+		vm.h1 = 1;
+		vm.h2 = 1;
+		vm.h3 = 1;
 
 		vm.imgTramo1 = RECTA;
 		vm.imgTramo2 = RECTA;
@@ -30,46 +29,140 @@ angular.module('estructuras')
 
 		vm.totalPhi1 = () => {
 			return (
-				$math.getPhi1({l: vm.l1 + vm.l2 + vm.l3,L: ecRecta,start: 0,end: vm.l1,
-			    xo: vm.xo,yo: vm.yo,x1: vm.x1,y1: vm.y1}) +
-			    $math.getPhi1({l: vm.l1 + vm.l2 + vm.l3,L: ecRecta,start: 0,end: vm.l1,
-			    xo: vm.xo,yo: vm.yo,x1: vm.x1,y1: vm.y1}) + 
-			    $math.getPhi1({l: vm.l1 + vm.l2 + vm.l3,L: ecRecta,start: 0,end: vm.l1,
-			    xo: vm.xo,yo: vm.yo,x1: vm.x1,y1: vm.y1})
-			    )
+				Math.pow(vm.h1 / vm.l1 + vm.l2 + vm.l3 ,3) *
+				(
+					$math.getPhi1({
+					l: vm.l1 + vm.l2 + vm.l3,
+					L: ecRecta,
+					start: 0,
+					end: vm.l1,
+					xo: 0,
+					yo: 0,
+					x1: vm.l1,
+					y1: vm.h1}) 
+				+
+			    $math.getPhi1({
+			    	l: vm.l1 + vm.l2 + vm.l3,
+			    	L: ecRecta,
+			    	start: vm.l1,
+			    	end: vm.l2,
+			    	xo: vm.l1,
+			    	yo: vm.h2,
+			    	x1: vm.l1 + vm.l2,
+			    	y1: 0}) + 
+			    $math.getPhi1({
+			    	l: vm.l1 + vm.l2 + vm.l3,
+			    	L: ecRecta,
+			    	start: vm.l2,
+			    	end: vm.l3,
+			    	xo: vm.l1 + vm.l2,
+			    	yo: 0,
+			    	x1: vm.l1 + vm.l2 + vm.l3,
+			    	y1: vm.h3})
+			      )
+			    );
 		}
 
 		vm.totalPhi2 = () => {
 			return (
-				$math.getPhi2({l: vm.l1 + vm.l2 + vm.l3,L: ecRecta,start: 0,end: vm.l1,
-			    xo: vm.xo,yo: vm.yo,x1: vm.x1,y1: vm.y1}) +
-			    $math.getPhi2({l: vm.l1 + vm.l2 + vm.l3,L: ecRecta,start: 0,end: vm.l1,
-			    xo: vm.xo,yo: vm.yo,x1: vm.x1,y1: vm.y1}) + 
-			    $math.getPhi2({l: vm.l1 + vm.l2 + vm.l3,L: ecRecta,start: 0,end: vm.l1,
-			    xo: vm.xo,yo: vm.yo,x1: vm.x1,y1: vm.y1})
-			    )
+				Math.pow(vm.h1 / vm.l1 + vm.l2 + vm.l3 ,3) *
+				($math.getPhi2({
+					l: vm.l1 + vm.l2 + vm.l3,
+					L: ecRecta,
+					start: 0,
+					end: vm.l1,
+					xo: 0,
+					yo: 0,
+					x1: vm.l1,
+					y1: vm.h1}) 
+				+
+			    $math.getPhi2({
+			    	l: vm.l1 + vm.l2 + vm.l3,
+			    	L: ecRecta,
+			    	start: vm.l1,
+			    	end: vm.l2,
+			    	xo: vm.l1,
+			    	yo: vm.h2,
+			    	x1: vm.l1 + vm.l2,
+			    	y1: 0}) + 
+			    $math.getPhi2({
+			    	l: vm.l1 + vm.l2 + vm.l3,
+			    	L: ecRecta,
+			    	start: vm.l2,
+			    	end: vm.l3,
+			    	xo: vm.l1 + vm.l2,
+			    	yo: 0,
+			    	x1: vm.l1 + vm.l2 + vm.l3,
+			    	y1: vm.h3}))
+			    );
 		}
 
 		vm.totalPhi3 = () => {
 			return (
-				$math.getPhi3({l: vm.l1 + vm.l2 + vm.l3,L: ecRecta,start: 0,end: vm.l1,
-			    xo: vm.xo,yo: vm.yo,x1: vm.x1,y1: vm.y1}) +
-			    $math.getPhi3({l: vm.l1 + vm.l2 + vm.l3,L: ecRecta,start: 0,end: vm.l1,
-			    xo: vm.xo,yo: vm.yo,x1: vm.x1,y1: vm.y1}) + 
-			    $math.getPhi3({l: vm.l1 + vm.l2 + vm.l3,L: ecRecta,start: 0,end: vm.l1,
-			    xo: vm.xo,yo: vm.yo,x1: vm.x1,y1: vm.y1})
-			    )
+				Math.pow(vm.h1 / vm.l1 + vm.l2 + vm.l3 ,3) *
+				($math.getPhi3({
+					l: vm.l1 + vm.l2 + vm.l3,
+					L: ecRecta,
+					start: 0,
+					end: vm.l1,
+					xo: 0,
+					yo: 0,
+					x1: vm.l1,
+					y1: vm.h1}) 
+				+
+			    $math.getPhi3({
+			    	l: vm.l1 + vm.l2 + vm.l3,
+			    	L: ecRecta,
+			    	start: vm.l1,
+			    	end: vm.l2,
+			    	xo: vm.l1,
+			    	yo: vm.h2,
+			    	x1: vm.l1 + vm.l2,
+			    	y1: 0}) + 
+			    $math.getPhi3({
+			    	l: vm.l1 + vm.l2 + vm.l3,
+			    	L: ecRecta,
+			    	start: vm.l2,
+			    	end: vm.l3,
+			    	xo: vm.l1 + vm.l2,
+			    	yo: 0,
+			    	x1: vm.l1 + vm.l2 + vm.l3,
+			    	y1: vm.h3}))
+			    );
 		}
 
 		vm.totalPhi4 = () => {
 			return (
-				$math.getPhi4({l: vm.l1 + vm.l2 + vm.l3,L: ecRecta,start: 0,end: vm.l1,
-			    xo: vm.xo,yo: vm.yo,x1: vm.x1,y1: vm.y1}) +
-			    $math.getPhi4({l: vm.l1 + vm.l2 + vm.l3,L: ecRecta,start: 0,end: vm.l1,
-			    xo: vm.xo,yo: vm.yo,x1: vm.x1,y1: vm.y1}) + 
-			    $math.getPhi4({l: vm.l1 + vm.l2 + vm.l3,L: ecRecta,start: 0,end: vm.l1,
-			    xo: vm.xo,yo: vm.yo,x1: vm.x1,y1: vm.y1})
-			    )
+				Math.pow(vm.h1 / vm.l1 + vm.l2 + vm.l3 ,3) *
+				($math.getPhi4({
+					l: vm.l1 + vm.l2 + vm.l3,
+					L: ecRecta,
+					start: 0,
+					end: vm.l1,
+					xo: 0,
+					yo: 0,
+					x1: vm.l1,
+					y1: vm.h1}) 
+				+
+			    $math.getPhi4({
+			    	l: vm.l1 + vm.l2 + vm.l3,
+			    	L: ecRecta,
+			    	start: vm.l1,
+			    	end: vm.l2,
+			    	xo: vm.l1,
+			    	yo: vm.h2,
+			    	x1: vm.l1 + vm.l2,
+			    	y1: 0}) + 
+			    $math.getPhi4({
+			    	l: vm.l1 + vm.l2 + vm.l3,
+			    	L: ecRecta,
+			    	start: vm.l2,
+			    	end: vm.l3,
+			    	xo: vm.l1 + vm.l2,
+			    	yo: 0,
+			    	x1: vm.l1 + vm.l2 + vm.l3,
+			    	y1: vm.h3}))
+			    );
 		}
 
 		vm.ci = () => {

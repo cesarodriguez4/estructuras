@@ -10,7 +10,6 @@ a {
 .container-funciones {
 	background-color: #949494;
     border-radius: 10px;
-    padding: 5% 0 0 0;
 }
 
 .flip {
@@ -22,3 +21,17 @@ a {
     -ms-filter: "FlipH";
     margin-left: -3%;
 }
+
+.footer {
+  background-color: mediumaquamarine;
+  padding: 1%;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .tramo {
+    height: 100px;
+  }
+}
+
+
