@@ -1,1 +1,1 @@
-angular.module('estructuras', []);
+angular.module('estructuras', ['ngMaterial']);
