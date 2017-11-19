@@ -43,8 +43,20 @@ a {
   .tramo {
     height: 100px;
   }
+  .segundaGraph {
+  margin-left: -5% !important;
+  }
+}
+
+.segundaGraph {
+  margin-left: -2%;
 }
 
 .ultimaGraph {
   margin-left: -3%;
+}
+
+.grey {
+  color: #e6e6e6;
+  vertical-align: middle;
 }

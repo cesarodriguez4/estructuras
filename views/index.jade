@@ -9,11 +9,13 @@ html
   body(ng-app="estructuras")
     nav(class="md-toolbar-tools bg-primary" ng-controller="header as header")
         a(class="navbar-brand text-white") Secciones variables
-        md-button(ng-click="header.toggleLeft()" hide-gt-md) Datos
+        md-button(ng-click="header.toggleLeft()" hide-gt-md)
+            i(class="fa fa-cog fa-2x grey")
     interfaz
     script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
     script(src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous")
     script(src="/bower_components/bootstrap-material-design/js/bootstrap-material-design.js")
+    script(src="https://use.fontawesome.com/475434dc66.js")
     script(src="/bower_components/mathjs/dist/math.js")
     script(src="/bower_components/angular/angular.js")
     script(src="/bower_components/angular-animate/angular-animate.js")
