@@ -4,7 +4,7 @@ body {
 }
 
 a {
-  color: #ff1451;
+  color: #ff1451 !important;
 }
 
 .footer {
@@ -59,4 +59,22 @@ a {
 .grey {
   color: #e6e6e6;
   vertical-align: middle;
+}
+
+.uc {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.bluhigh {
+  background-color: #9797c3;
+}
+
+.blulow {
+  background-color: #bfc9de;
+}
+
+
+.shadow {
+  text-shadow: 1px 1px 3px black;
 }

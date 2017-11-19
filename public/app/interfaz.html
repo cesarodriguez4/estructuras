@@ -26,7 +26,7 @@
 	<input type="number" class="form-control" placeholder="Carga Puntual" name="p">
 	</md-content>
 	</md-sidenav>
-	<div class="d-inline-block"">
+	<div>
 		<div>
 			<div>
 				<div class="row container-funciones">
@@ -35,30 +35,63 @@
 					<img class='d-inline-block col-4 tramo ultimaGraph' src="{{$ctrl.imgTramo3}}">
 				</div>
 				<div>
-					<div class="col-lg-4">
-						<h4 class="text-center">L1</h4>
-						<select ng-model="$ctrl.imgTramo1"  class="form-control">
-							<option value="/app/parabola.png">Ecuación Cuadrática</option>
-							<option value="/app/recta.png">Ecuación de primer grado</option>
-						</select>
+					<div>
+						<md-radio-group ng-model="$ctrl.imgTramo1" aria-label="Green">
+							<label>Tramo 1</label>
+							<md-radio-button ng-value="'/app/parabola.png'" aria-label="Green">
+							  Ecuación Cuadrática
+							</md-radio-button>
+							<md-radio-button ng-value="'/app/recta.png'" aria-label="Green">
+							  Ecuación de primer grado
+							</md-radio-button>
+						</md-radio-group>
 					</div>
-					<div class="col-lg-4">
-						<h4 class="text-center">L2</h4>
-						<select ng-model="$ctrl.imgTramo2" class="form-control">
-							<option value="/app/parabola.png">Ecuación Cuadrática</option>
-							<option value="/app/recta.png">Ecuación de primer grado</option>
-						</select>
+					<div">
+						<md-radio-group ng-model="$ctrl.imgTramo2" aria-label="Green">
+							<label>Tramo 2</label>
+							<md-radio-button ng-value="'/app/parabola.png'" aria-label="Green">
+							  Ecuación Cuadrática
+							</md-radio-button>
+							<md-radio-button ng-value="'/app/recta.png'" aria-label="Green">
+							  Ecuación de primer grado
+							</md-radio-button>
+						</md-radio-group>
 					</div>
-					<div class="col-lg-4">
-						<h4 class="text-center">L3</h4>
-						<select ng-model="$ctrl.imgTramo3" class="form-control">
-							<option value="/app/parabola.png">Ecuación Cuadrática</option>
-							<option value="/app/recta.png">Ecuación de primer grado</option>
-						</select>
+					<div>
+						<md-radio-group ng-model="$ctrl.imgTramo3" aria-label="Green">
+							<label>Tramo 3</label>
+							<md-radio-button ng-value="'/app/parabola.png'" aria-label="Green">
+							  Ecuación Cuadrática
+							</md-radio-button>
+							<md-radio-button ng-value="'/app/recta.png'" aria-label="Green">
+							  Ecuación de primer grado
+							</md-radio-button>
+						</md-radio-group>
 					</div>
 				</div>
+				<div class="card">
+				<h3 class="text-center mt-3">Resultados</h3>
+				<ul class="list-group">
+					<li class="list-group-item"><strong>Ф1: {{$ctrl.totalPhi1()}}</strong></li>
+					<li class="list-group-item"><strong>Ф2: {{$ctrl.totalPhi2()}}</strong></li>
+					<li class="list-group-item"><strong>Ф3: {{$ctrl.totalPhi3()}}</strong></li>
+					<li class="list-group-item"><strong>Ф4: {{$ctrl.totalPhi4()}}</strong></li>
+					<li class="list-group-item"><strong>Ci: {{$ctrl.ci()}}</strong></li>
+					<li class="list-group-item"><strong>C: {{$ctrl.c()}}</strong></li>
+					<li class="list-group-item"><strong>Cj: {{$ctrl.cj()}}</strong></li>
+					<li class="list-group-item"><strong>Ca: {{$ctrl.ca()}}</strong></li>
+				</ul>
+			</div>
+			<h5 class="mt-5">Colaboradores</h5>
+				<md-divider></md-divider>
+			<div class="row" layout="row">
+				<div class="text-center bluhigh text-white p-4 shadow col-lg-3">Cesar Rodriguez <br> Programación </div>
+				<div class="text-center blulow text-white p-4 shadow col-lg-3" >Jose Luis Saenz <br> Cálculos</div>
+				<div class="text-center bluhigh text-white p-4 shadow col-lg-3" >Reiner Nievez <br> Cálculos</div>
+				<div class="text-center blulow text-white p-4 shadow col-lg-3" >Yaneth Cardoza <br> Cálculos</div>
+				</div>
+			
 			</div>
 		</div>
 	</div>
-</div>
-<footer class="text-center footer blue">El codigo fuente ha sido <a href="https://github.com/cesarodriguez4/estructuras">compartido</a> como software libre bajo la licencia MIT. | Universidad de Carabobo. </footer>
+	<footer class="text-center footer blue">El codigo fuente ha sido <a href="https://github.com/cesarodriguez4/estructuras">compartido</a> como software libre bajo la licencia MIT. | Universidad de Carabobo. </footer>
