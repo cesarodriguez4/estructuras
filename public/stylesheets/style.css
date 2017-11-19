@@ -4,16 +4,28 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #ff1451;
 }
 
+.footer {
+  padding: 1%;
+  color: white;
+}
+
+.blue {
+  background-color: #2196f3 !important;
+}
+
+
 .container-funciones {
-	background-color: #949494;
-    border-radius: 10px;
+  background-image: url('https://img00.deviantart.net/c500/i/2014/154/1/a/quadanium_steel_wallpaper_by_grungetv-d5mmz3e.jpg');
+  background-color: #949494;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .flip {
-	-moz-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
@@ -22,10 +34,9 @@ a {
     margin-left: -3%;
 }
 
-.footer {
-  background-color: mediumaquamarine;
-  padding: 1%;
-  color: white;
+.col-4 {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 @media (max-width: 600px) {
@@ -34,4 +45,6 @@ a {
   }
 }
 
-
+.ultimaGraph {
+  margin-left: -3%;
+}

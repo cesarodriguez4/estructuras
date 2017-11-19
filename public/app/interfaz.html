@@ -1,95 +1,64 @@
-
-<div class="mt-5">
-	<md-sidenav md-component-id="left" class="md-sidenav-left">
-	    Left Nav!
-	 </md-sidenav>
-	<div class="row">
-		<div class="col-lg-8">
-			<h4 class="text-center">Secciones variables</h4>
-			<div class="row container-funciones">
-				<img class='d-inline-block col-4 tramo' src="{{$ctrl.imgTramo1}}">
-				<img class='d-inline-block col-4 flip tramo' src="{{$ctrl.imgTramo2}}">
-				<img class='d-inline-block col-4 tramo' src="{{$ctrl.imgTramo3}}">
-			</div>
-			<div class="row">
-				<div class="col-lg-4">
-					<h4 class="text-center">L1</h4>
-					<select ng-model="$ctrl.imgTramo1"  class="form-control">
-						<option value="/app/parabola.png">Ecuación Cuadrática</option>
-						<option value="/app/recta.png">Ecuación de primer grado</option>
-					</select>
+<div style="display: flex">
+	<md-sidenav
+	class="md-sidenav-left d-inline-block"
+	md-component-id="left"
+	md-is-locked-open="$mdMedia('gt-md')"
+	md-whiteframe="4">
+	<md-toolbar class="md-theme-indigo">
+	<h1 class="md-toolbar-tools blue">Ingresa los Datos </h1>
+	</md-toolbar>
+	<md-content layout-padding ng-controller="LeftCtrl">
+	<label>Longitud 1</label>
+	<input type="number" class="form-control" ng-model="$ctrl.l1" placeholder="Longitud 1" name="L1">
+	<label>Longitud 2</label>
+	<input type="number" class="form-control" ng-model="$ctrl.l2" placeholder="Longitud 2" name="L2">
+	<label>Longitud 3</label>
+	<input type="number" class="form-control" ng-model="$ctrl.l3" placeholder="Longitud 3" name="L3">
+	<label>Altura 1</label>
+	<input type="number" class="form-control" ng-model="$ctrl.h1" placeholder="Altura 1" name="H1">
+	<label>Altura 2</label>
+	<input type="number" class="form-control" ng-model="$ctrl.h2" placeholder="Altura 2" name="H2">
+	<label>Altura 3</label>
+	<input type="number" class="form-control" ng-model="$ctrl.h3" placeholder="Altura 3" name="H3">
+	<label>Carga Distribuida (q)</label>
+	<input type="number" class="form-control" placeholder="Carga Distribuida" name="q">
+	<label>Carga Puntual (p)</label>
+	<input type="number" class="form-control" placeholder="Carga Puntual" name="p">
+	</md-content>
+	</md-sidenav>
+	<div class="d-inline-block"">
+		<div>
+			<div>
+				<div class="row container-funciones">
+					<img class='d-inline-block tramo' src="{{$ctrl.imgTramo1}}">
+					<img class='d-inline-block col-4 flip tramo' src="{{$ctrl.imgTramo2}}">
+					<img class='d-inline-block col-4 tramo ultimaGraph' src="{{$ctrl.imgTramo3}}">
 				</div>
-				<div class="col-lg-4">
-					<h4 class="text-center">L2</h4>
-					<select ng-model="$ctrl.imgTramo2" class="form-control">
-						<option value="/app/parabola.png">Ecuación Cuadrática</option>
-						<option value="/app/recta.png">Ecuación de primer grado</option>
-					</select>
+				<div>
+					<div class="col-lg-4">
+						<h4 class="text-center">L1</h4>
+						<select ng-model="$ctrl.imgTramo1"  class="form-control">
+							<option value="/app/parabola.png">Ecuación Cuadrática</option>
+							<option value="/app/recta.png">Ecuación de primer grado</option>
+						</select>
+					</div>
+					<div class="col-lg-4">
+						<h4 class="text-center">L2</h4>
+						<select ng-model="$ctrl.imgTramo2" class="form-control">
+							<option value="/app/parabola.png">Ecuación Cuadrática</option>
+							<option value="/app/recta.png">Ecuación de primer grado</option>
+						</select>
+					</div>
+					<div class="col-lg-4">
+						<h4 class="text-center">L3</h4>
+						<select ng-model="$ctrl.imgTramo3" class="form-control">
+							<option value="/app/parabola.png">Ecuación Cuadrática</option>
+							<option value="/app/recta.png">Ecuación de primer grado</option>
+						</select>
+					</div>
 				</div>
-				<div class="col-lg-4">
-					<h4 class="text-center">L3</h4>
-					<select ng-model="$ctrl.imgTramo3" class="form-control">
-						<option value="/app/parabola.png">Ecuación Cuadrática</option>
-						<option value="/app/recta.png">Ecuación de primer grado</option>
-					</select>
-				</div>
 			</div>
-			<div class="row">
-				<h3 class="text-center mt-2">Esquema</h3>
-				<img class="container" src="/app/diagrama.png">
-			</div>
-		</div>
-		<div class="col-lg-4">
-			<h3 class="text-center mt-3">Ingresa los datos</h3>
-			<label>Longitud 1</label>
-			<input type="number" class="form-control" ng-model="$ctrl.l1" placeholder="Longitud 1" name="L1">
-			<label>Longitud 2</label>
-			<input type="number" class="form-control" ng-model="$ctrl.l2" placeholder="Longitud 2" name="L2">
-			<label>Longitud 3</label>
-			<input type="number" class="form-control" ng-model="$ctrl.l3" placeholder="Longitud 3" name="L3">
-			<label>Altura 1</label>
-			<input type="number" class="form-control" ng-model="$ctrl.h1" placeholder="Altura 1" name="H1">
-			<label>Altura 2</label>
-			<input type="number" class="form-control" ng-model="$ctrl.h2" placeholder="Altura 2" name="H2">
-			<label>Altura 3</label>
-			<input type="number" class="form-control" ng-model="$ctrl.h3" placeholder="Altura 3" name="H3">
-			<label>Carga Distribuida (q)</label>
-			<input type="number" class="form-control" placeholder="Carga Distribuida" name="q">
-			<label>Carga Puntual (p)</label>
-			<input type="number" class="form-control" placeholder="Carga Puntual" name="p">
-			<div class="card">
-				<h3 class="text-center mt-3">Resultados</h3>
-				<ul class="list-group">
-					<li class="list-group-item"><strong>Ф1: {{$ctrl.totalPhi1()}}</strong></li>
-					<li class="list-group-item"><strong>Ф2: {{$ctrl.totalPhi2()}}</strong></li>
-					<li class="list-group-item"><strong>Ф3: {{$ctrl.totalPhi3()}}</strong></li>
-					<li class="list-group-item"><strong>Ф4: {{$ctrl.totalPhi4()}}</strong></li>
-					<li class="list-group-item"><strong>Ci: {{$ctrl.ci()}}</strong></li>
-					<li class="list-group-item"><strong>C: {{$ctrl.c()}}</strong></li>
-					<li class="list-group-item"><strong>Cj: {{$ctrl.cj()}}</strong></li>
-					<li class="list-group-item"><strong>Ca: {{$ctrl.ca()}}</strong></li>
-				</ul>
-			</div>
-		</div>
-		<div class="col-lg-6 mt-3">
-			<div class="row">
-			<div class="col-12">
-				<h6>Equipo</h6>
-			</div>
-			<div class='col-lg-3'>
-				<p>Jose Luis Saenz - Cálculos</p>
-			</div>
-			<div class='col-lg-3'>
-				<p>Rainer Nievez - Cálculos</p>
-			</div>
-			<div class='col-lg-3'>
-				<p>Yaneth Cardoza - Cálculos</p>
-			</div>
-			<div class='col-lg-3'>
-				<p>Cesar Rodriguez - Programación</p>
-			</div>
-		</div>
 		</div>
 	</div>
 </div>
-<footer class="text-center footer">El codigo fuente ha sido <a href="https://github.com/cesarodriguez4/estructuras">compartido</a> como software libre bajo la licencia MIT. | Universidad de Carabobo. </footer>
+<footer class="text-center footer blue">El codigo fuente ha sido <a href="https://github.com/cesarodriguez4/estructuras">compartido</a> como software libre bajo la licencia MIT. | Universidad de Carabobo. </footer>
